@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emotion Recognition</title>
+  <link rel="stylesheet" href="facerecog.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="camera-card">
+      <div class="camera-stage">
+        <video id="video" autoplay muted playsinline></video>
+        <canvas id="overlay"></canvas>
+        <div class="camera-status" id="status">Starting camera...</div>
+      </div>
+
+      <div class="panel">
+        <p class="eyebrow">Live Analysis</p>
+        <h1>Face Emotion Recognition</h1>
+        <p class="hint">The camera opens immediately and starts scanning once the models are ready.</p>
+        <div class="emotion-readout" id="emotion">Waiting for detection...</div>
+      </div>
+    </section>
+  </main>
+
+  <script defer src="./node_modules/face-api.js/dist/face-api.min.js"></script>
+  <script defer src="facerecog.js"></script>
+</body>
+</html>
